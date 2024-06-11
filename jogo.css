@@ -1,0 +1,22 @@
+body{
+    background-color: #343a40;
+    color: white;
+    
+    }
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .inicio{
+        text-align: center;
+        background-color: #212529;
+    
+    }
+    
+    .meio{
+    height: 5cm;
+    margin: 35px; 
+    align-items: center;
+    text-align: center;
+    background-color: #212529;    
+    }
