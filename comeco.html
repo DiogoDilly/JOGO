@@ -10,17 +10,14 @@
     <header class="inicio">
         <h1> o jogo</h1>
     </header>
-
-<form>
+<form onsubmit="return false;">
     <div class="meio">
-    <h1 >o jogo</h1>
-    <h1>coloque um numero entre 1 a 10</h1>   
-    <input type="number" id="inserido" required >
-    <button class = "botao1"onclick="jogo(); return false" >teste</button>
-    <h1 id ="palavras"></h1>
+    <h2 >para jogar o jogo coloque seu nome</h2>
+    <input type="text" id="nome" required >
     <div>
-    <h1 id ="tenta">tentativas:0 </h1>
-    </div>
+    <button class = "botao1" onclick="acessar()">jogar</button>
+  </div>
+ <h2 id = "palavras3"></h2>
 </div>
 </form>
 <script src="jogo.js"></script>

@@ -10,7 +10,7 @@ body{
     .inicio{
         text-align: center;
         background-color: #212529;
-    
+        border: solid #2c4d56 4px;
     }
     
     .meio{
@@ -18,5 +18,32 @@ body{
     margin: 35px; 
     align-items: center;
     text-align: center;
-    background-color: #212529;    
+    background-color: #212529;
+    border: solid #2c4d56 4px;    
+    }
+
+    .botao1{
+    cursor: pointer;
+    background-color: #04fd13;
+    color: black;
+    border: none;
+    height: 20px;
+    border-radius: 30px;
+    width: 75px;
+    }
+    .botao2{
+        cursor: pointer;
+        background-color: #04fd13;
+        color: black;
+        border: solid black 4px;
+        height: 40px;
+        border-radius: 30px; 
+    }
+    .botao3{
+        cursor: pointer;
+        background-color: #f8bf38;
+        color: black;
+        border: solid black 4px;
+        height: 40px;
+        border-radius: 30px; 
     }
