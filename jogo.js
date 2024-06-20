@@ -1,14 +1,25 @@
 var tentativas = 0;
-var advinhacao = Math.floor(Math.random() * 10);
+const advinhacao = Math.floor(Math.random() * 100);
 var nombre = document.getElementById("nome").value;
 document.getElementById("tenta")
 document.getElementById("palavras");
 document.getElementById("palavras2");
 document.getElementById("palavras3")
 function jogo() {
-    var valordado = document.getElementById("inserido").value;
+    var valordado = document.getElementById("inserido").value.trim();
     if (valordado == advinhacao) {
         window.location.href = "fim.html"
+    
+    } else if (valordado < 1) {
+        palavras.textContent = "!!COOLOQUE UM NUMERO VALIDO!!";
+        palavras.style.color = "red";
+    }else if (valordado > 100) {
+        palavras.textContent = "!!COOLOQUE UM NUMERO VALIDO!!";
+        palavras.style.color = "red";
+    }
+    else if (valordado  === "") {
+        palavras.textContent = "COLOQUE UM NUMERO";
+        palavras.style.color = "red";
     } else if (valordado > advinhacao) {
         tentativas = tentativas + 1;
         palavras.textContent = "ERROU,tente algo menor do que " + valordado;
@@ -23,19 +34,15 @@ function jogo() {
     if (tentativas > 0) {
         tenta.style.color = "green";
     }
-    if (tentativas > 5) {
+    if (tentativas > 10) {
         tenta.style.color = "yellow"
     }
-    if (tentativas > 15){
+    if (tentativas > 20){
     tenta.style.color = "red"
     }
 }
 function acessar() {
     window.location.href = "jogo.html"
-}
-function ver() {
-    palavras2.textContent = " parabens o numero era: " + advinhacao ;
-    palavras2.style.color = "green";
 }
 function entradao(){
     var nomezão = document.getElementById("nome").value.trim();
