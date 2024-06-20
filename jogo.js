@@ -1,6 +1,6 @@
 var tentativas = 0;
 var advinhacao = Math.floor(Math.random() * 10);
-var nombre = document.getElementById("nome");
+var nombre = document.getElementById("nome").value;
 document.getElementById("tenta")
 document.getElementById("palavras");
 document.getElementById("palavras2");
@@ -34,6 +34,15 @@ function acessar() {
     window.location.href = "jogo.html"
 }
 function ver() {
-    palavras2.textContent = nombre + " parabens o numero era: " + advinhacao ;
+    palavras2.textContent = " parabens o numero era: " + advinhacao ;
     palavras2.style.color = "green";
 }
+function entradao(){
+    var nomezão = document.getElementById("nome").value.trim();
+        if (nomezão === "") {
+            aviso.textContent = "!!COLOQUE UM NOME!!"
+            aviso.style.color = "red"
+    }else{
+         window.location.href = "jogo.html"
+    }
+    }
